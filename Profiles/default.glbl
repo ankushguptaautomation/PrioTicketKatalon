@@ -6,17 +6,17 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PPsuperadmin@fullserviceplatform.com'</initValue>
+      <initValue>'bagpacker02@gmail.com'</initValue>
       <name>username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://testlogin.priohub.com/'</initValue>
+      <initValue>'https://login.test-prio.com/'</initValue>
       <name>urlLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'a'</initValue>
+      <initValue>'Admin@78#6'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
