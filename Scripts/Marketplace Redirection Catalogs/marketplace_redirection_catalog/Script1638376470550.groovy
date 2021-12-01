@@ -28,20 +28,21 @@ WebUI.callTestCase(findTestCase('Test Cases/PrioTicket Login/PrioTicket Login'),
 WebUI.delay(6)
 WebDriver driver =DriverFactory.getWebDriver()
 
-List<WebElement> text = driver.findElements(By.cssSelector(".menu-name"))
-int count=driver.findElements(By.cssSelector(".menu-name")).size()
-System.out.println("Number of elements:" +count);
+
+List<WebElement> text = WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2)
+int count=WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).size()
+println("Number of elements:" +count);
 
 for(int i=0;i<count;i++)
 	
 {
-	String textdata=driver.findElements(By.cssSelector(".menu-name")).get(i).getText();
-	System.out.println(textdata)
+	String textdata=WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).get(i).getText();
+	println(textdata)
 	
 	if(textdata=="Channels")
 	{	
 	println('Data Fetched')
-	driver.findElements(By.cssSelector(".menu-name")).get(i).click()
+	WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).get(i).click()
 	break
 	}
 }

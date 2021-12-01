@@ -3,9 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-
-import java.sql.Driver
-
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -18,30 +15,34 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.webui.driver.DriverFactory
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.WebElement
 
-WebUI.callTestCase(findTestCase('Test Cases/PrioTicket Catalog/catalog_main_screen'), null)
+WebUI.callTestCase(findTestCase('Marketplace Redirection Catalogs/marketplace_redirection_catalog'), null)
 
-WebDriver driver =DriverFactory.getWebDriver()
-WebUI.delay(5)
-driver.findElement(By.xpath("//*[@id='pending-products-count-section']")).click()
+List<WebElement> listElement = WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2)
+int count=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).size()
+println("Number of elements:" +count);
 
-
-WebElement directpopup =driver.findElement(By.xpath('//*[@id="pending-products-modal"]/div[1]/div[2]/div/div/div/div[3]'))
-
-List<WebElement> directcount =directpopup.findElements(By.cssSelector('.id'))
-int count=directpopup.findElements(By.cssSelector('.id')).size()
-System.out.println("No. of Products"+count)
 
 for(int i=0;i<count;i++)
 	
 {
-	String textdata=directpopup.findElements(By.cssSelector('.id')).get(i).getText();
+	String textdata=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).get(i).getText();
 	System.out.println(textdata)
+	
+	if(textdata=="Direct Sales")
+	{
+	println('Data Fetched')
+	WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).get(i).click()
+	break
+	}
 }
+

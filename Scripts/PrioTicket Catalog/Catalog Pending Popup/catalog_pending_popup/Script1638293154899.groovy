@@ -3,6 +3,9 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import java.sql.Driver
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -17,25 +20,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.By
+import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.WebElement
 
-WebUI.openBrowser(GlobalVariable.urlLogin)
+WebUI.callTestCase(findTestCase('Marketplace Redirection Catalogs/marketplace_redirection_catalog'), null)
 
-WebUI.maximizeWindow()
+WebDriver driver =DriverFactory.getWebDriver()
+WebUI.delay(5)
+driver.findElement(By.xpath("//*[@id='pending-products-count-section']")).click()
 
-WebUI.delay(1)
 
-WebUI.setText(findTestObject('PrioTicket Login Objects/Username'), GlobalVariable.username)
+WebElement directpopup =driver.findElement(By.xpath('//*[@id="pending-products-modal"]/div[1]/div[2]/div/div/div/div[3]'))
 
-WebUI.setText(findTestObject('PrioTicket Login Objects/Password'), GlobalVariable.password)
+List<WebElement> directcount =directpopup.findElements(By.cssSelector('.id'))
+int count=directpopup.findElements(By.cssSelector('.id')).size()
+System.out.println("No. of Products"+count)
 
-String text=WebUI.getAttribute(findTestObject('PrioTicket Login Objects/domain_verify'), "src")
-
-if(text.contains("phub"))
+for(int i=0;i<count;i++)
+	
 {
-	WebUI.check(findTestObject('PrioTicket Login Objects/Terms_condition_checkbox'))
-	WebUI.click(findTestObject('PrioTicket Login Objects/SignIn_Button'))
+	String textdata=directpopup.findElements(By.cssSelector('.id')).get(i).getText();
+	System.out.println(textdata)
 }
- else 
-	 
-WebUI.click(findTestObject('PrioTicket Login Objects/SignIn_Button'))
-

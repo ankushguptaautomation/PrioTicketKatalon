@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Left_navigation_main_screen</name>
+   <name>direct_catalog_click</name>
    <tag></tag>
-   <elementGuidId>c755e407-7e63-4ac6-8222-9581c6a29d8b</elementGuidId>
+   <elementGuidId>0f1a1a6a-b4e1-4472-a317-b49e4814ebf3</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;direct_catalog_list&quot;]/div/h4</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@class=&quot;menu-name&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

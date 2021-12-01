@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>catalog_main_screen</name>
+   <name>marketplace_redirection_catalog</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>a2e14a9b-be8c-482c-bc33-ff333c588084</testCaseGuid>
