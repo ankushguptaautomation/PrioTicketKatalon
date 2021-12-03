@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Direct Catalog/Direct Subacatalog/Distributor Catalog/Distributor Subcatalog</description>
+   <name>catalog_selection</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b7382469-7511-4d28-be76-b805160c6eaf</testCaseGuid>
+</TestCaseEntity>

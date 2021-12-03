@@ -15,34 +15,26 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-import org.openqa.selenium.By
-import org.openqa.selenium.Keys
-
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
-import com.kms.katalon.core.webui.driver.DriverFactory
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.WebElement
-
-WebUI.callTestCase(findTestCase('Marketplace Redirection Catalogs/marketplace_redirection_catalog'), null)
-
-List<WebElement> listElement = WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2)
-int count=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).size()
-println("Number of elements:" +count);
+//Getting Count of Catalogs Direct and Distributor Catalogs including Subcatalogs
+int catalog_count=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).size()
+println("No.of Direct catalog and Distributor Catalogs including Subcatalogs:" +catalog_count);
 
 
-for(int i=0;i<count;i++)
+
+//Fetching Selected Catalogs
+for(int i=0;i<catalog_count;i++)
 	
 {
-	String textdata=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).get(i).getText();
-	System.out.println(textdata)
+	String catalogs_name=WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).get(i).getText();
+	println("Catalogs Headings:"+catalogs_name)
 	
-	if(textdata=="Direct Sales")
+	if(catalogs_name==GlobalVariable.catalogname)
 	{
-	println('Data Fetched')
+	println('Selected Catalog Verified')
 	WebUI.findWebElements(findTestObject('PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click'),2).get(i).click()
+	println('Catalog Clicked')
 	break
 	}
 }
-

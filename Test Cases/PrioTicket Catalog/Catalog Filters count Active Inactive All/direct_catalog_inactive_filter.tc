@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Here we are verifing the Active Filter feature of direct catalogs</description>
+   <name>direct_catalog_inactive_filter</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e1e0581f-240b-468f-a623-e1bf7a11ba56</testCaseGuid>
+</TestCaseEntity>

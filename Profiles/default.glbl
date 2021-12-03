@@ -6,17 +6,22 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'bagpacker02@gmail.com'</initValue>
+      <initValue>'backend@yopmail.com'</initValue>
       <name>username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://login.test-prio.com/'</initValue>
+      <initValue>'http://10.10.10.20/projects/testlogin.prioticket.com'</initValue>
       <name>urlLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Admin@78#6'</initValue>
+      <initValue>'Admin@123'</initValue>
       <name>password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Direct Sales'</initValue>
+      <name>catalogname</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

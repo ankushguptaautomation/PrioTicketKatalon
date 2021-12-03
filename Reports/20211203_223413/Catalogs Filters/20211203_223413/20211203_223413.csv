@@ -1,0 +1,53 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Catalogs Filters,Chrome 96.0.4664.45,,,2021-12-03 22:34:21,2021-12-03 22:36:42,2m - 20.760s,PASSED
+,,,,,,,
+Test Cases/PrioTicket Catalog/Catalog Active Inactive/direct_catalog_active_filter,Chrome 96.0.4664.45,Here we are verifing the Active Filter feature of direct catalogs,,2021-12-03 22:34:22,2021-12-03 22:35:46,1m - 23.974s,PASSED
+"callTestCase(findTestCase(""Marketplace Redirection Catalogs/marketplace_redirection_catalog""), null)",Chrome 96.0.4664.45,,,2021-12-03 22:34:24,2021-12-03 22:35:00,36.233s,PASSED
+"callTestCase(findTestCase(""PrioTicket Catalog/Catalog Active Inactive/catalog_selection""), null)",Chrome 96.0.4664.45,,,2021-12-03 22:35:00,2021-12-03 22:35:08,7.524s,PASSED
+delay(5),Chrome 96.0.4664.45,,,2021-12-03 22:35:08,2021-12-03 22:35:13,5.016s,PASSED
+"click(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_active_button""))",Chrome 96.0.4664.45,,,2021-12-03 22:35:13,2021-12-03 22:35:14,0.930s,PASSED
+"active_products = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/toggle_button_listing""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:35:14,2021-12-03 22:35:15,1.441s,PASSED
+"println(""No.of Active Products:"" + active_products)",Chrome 96.0.4664.45,,,2021-12-03 22:35:15,2021-12-03 22:35:15,0.002s,PASSED
+if (active_products >= 10),Chrome 96.0.4664.45,,,2021-12-03 22:35:15,2021-12-03 22:35:24,8.786s,PASSED
+"active_products1 = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/toggle_button_listing""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:35:24,2021-12-03 22:35:25,1.554s,PASSED
+"println(""No.of Active Products:"" + active_products1)",Chrome 96.0.4664.45,,,2021-12-03 22:35:25,2021-12-03 22:35:25,0.003s,PASSED
+total_active_products = active_products1,Chrome 96.0.4664.45,,,2021-12-03 22:35:25,2021-12-03 22:35:25,0.002s,PASSED
+"pagination = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click""), 2)",Chrome 96.0.4664.45,,,2021-12-03 22:35:25,2021-12-03 22:35:26,0.601s,PASSED
+"paginationcount = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/pagination_catalog_active""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:35:26,2021-12-03 22:35:26,0.451s,PASSED
+"println(""Number of elements:"" + paginationcount)",Chrome 96.0.4664.45,,,2021-12-03 22:35:26,2021-12-03 22:35:26,0.002s,PASSED
+"for ([i = 0, i < paginationcount, (i++)])",Chrome 96.0.4664.45,,,2021-12-03 22:35:26,2021-12-03 22:35:30,3.814s,PASSED
+active_products123 = 0,Chrome 96.0.4664.45,,,2021-12-03 22:35:30,2021-12-03 22:35:30,0.001s,PASSED
+active_products12345 = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 96.0.4664.45,,,2021-12-03 22:35:30,2021-12-03 22:35:30,0.001s,PASSED
+"for ([f = 1, f < paginationcount, (f++)])",Chrome 96.0.4664.45,,,2021-12-03 22:35:30,2021-12-03 22:35:44,13.341s,PASSED
+Totals = total_active_products + active_products123,Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:44,0.002s,PASSED
+"println(""Total No. of Active Products:"" + Totals)",Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:44,0.003s,PASSED
+sum = String.valueOf(Totals),Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:44,0.004s,PASSED
+"product_count = findWebElement(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/product_count_on_catalogs""), 2).getText()",Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:44,0.553s,PASSED
+if (product_count.contains(sum)),Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:44,0.006s,PASSED
+closeBrowser(),Chrome 96.0.4664.45,,,2021-12-03 22:35:44,2021-12-03 22:35:46,1.783s,PASSED
+,,,,,,,
+Test Cases/PrioTicket Catalog/Catalog Active Inactive/direct_catalog_inactive_filter,Chrome 96.0.4664.45,Here we are verifing the Active Filter feature of direct catalogs,,2021-12-03 22:35:46,2021-12-03 22:36:42,55.972s,PASSED
+"callTestCase(findTestCase(""Marketplace Redirection Catalogs/marketplace_redirection_catalog""), null)",Chrome 96.0.4664.45,,,2021-12-03 22:35:47,2021-12-03 22:36:18,30.638s,PASSED
+"callTestCase(findTestCase(""PrioTicket Catalog/Catalog Active Inactive/catalog_selection""), null)",Chrome 96.0.4664.45,,,2021-12-03 22:36:18,2021-12-03 22:36:21,2.988s,PASSED
+delay(5),Chrome 96.0.4664.45,,,2021-12-03 22:36:21,2021-12-03 22:36:26,5.014s,PASSED
+"click(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_inactive_button""))",Chrome 96.0.4664.45,,,2021-12-03 22:36:26,2021-12-03 22:36:27,0.901s,PASSED
+"Inactive_products = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/toggle_button_listing""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:36:27,2021-12-03 22:36:28,1.353s,PASSED
+"println(""No.of Active Products:"" + Inactive_products)",Chrome 96.0.4664.45,,,2021-12-03 22:36:28,2021-12-03 22:36:28,0.003s,PASSED
+if (Inactive_products >= 10),Chrome 96.0.4664.45,,,2021-12-03 22:36:28,2021-12-03 22:36:37,8.684s,PASSED
+"Inactive_products1 = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/toggle_button_listing""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:36:37,2021-12-03 22:36:38,1.289s,PASSED
+"println(""No.of Active Products:"" + Inactive_products1)",Chrome 96.0.4664.45,,,2021-12-03 22:36:38,2021-12-03 22:36:38,0.002s,PASSED
+total_Inactive_products = Inactive_products1,Chrome 96.0.4664.45,,,2021-12-03 22:36:38,2021-12-03 22:36:38,0.001s,PASSED
+"pagination = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/direct_catalog_click""), 2)",Chrome 96.0.4664.45,,,2021-12-03 22:36:38,2021-12-03 22:36:39,0.456s,PASSED
+"paginationcount = findWebElements(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/pagination_catalog_active""), 2).size()",Chrome 96.0.4664.45,,,2021-12-03 22:36:39,2021-12-03 22:36:39,0.455s,PASSED
+"println(""Number of elements:"" + paginationcount)",Chrome 96.0.4664.45,,,2021-12-03 22:36:39,2021-12-03 22:36:39,0.001s,PASSED
+"for ([i = 0, i < paginationcount, (i++)])",Chrome 96.0.4664.45,,,2021-12-03 22:36:39,2021-12-03 22:36:40,0.529s,PASSED
+Inactive_products123 = 0,Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+Inactive_products12345 = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+"for ([f = 1, f < paginationcount, (f++)])",Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+Totals = total_Inactive_products + Inactive_products123,Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+"println(""Total No. of Active Products:"" + Totals)",Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+sum = String.valueOf(Totals),Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+"product_count = findWebElement(findTestObject(""PrioTicket Catalog Objects/Catalog Active Inactive Objects/product_count_on_catalogs""), 2).getText()",Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.483s,PASSED
+if (product_count.contains(sum)),Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.001s,PASSED
+else,Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:40,0.003s,PASSED
+closeBrowser(),Chrome 96.0.4664.45,,,2021-12-03 22:36:40,2021-12-03 22:36:42,1.676s,PASSED
