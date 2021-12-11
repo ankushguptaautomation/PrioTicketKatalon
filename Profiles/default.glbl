@@ -6,22 +6,42 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'backend@yopmail.com'</initValue>
+      <initValue>'bagpacker02@gmail.com'</initValue>
       <name>username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://10.10.10.20/projects/testlogin.prioticket.com'</initValue>
+      <initValue>'https://login.test-prio.com/'</initValue>
       <name>urlLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Admin@123'</initValue>
+      <initValue>'Admin@78#6'</initValue>
       <name>password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Channels'</initValue>
+      <name>redirect_left_navigation</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Direct Sales'</initValue>
       <name>catalogname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>1:Distributor , 2:Direct , 4:Reseller</description>
+      <initValue>'4'</initValue>
+      <name>subcatalog_create_category</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'My Testing Subcatalog'</initValue>
+      <name>create_subcatalog_name</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'My Testing Subcatalog Description'</initValue>
+      <name>create_subcatalog_desc</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

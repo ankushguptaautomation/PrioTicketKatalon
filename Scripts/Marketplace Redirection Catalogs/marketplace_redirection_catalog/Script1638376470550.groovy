@@ -24,28 +24,35 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.WebElement
 
+//calling login function
 WebUI.callTestCase(findTestCase('Test Cases/PrioTicket Login/PrioTicket Login'),null)
-WebUI.delay(6)
+
+//Wating time
+WebUI.delay(2)
+
+//--?Webdriver to use selenium objects if needed (Optional)
 WebDriver driver =DriverFactory.getWebDriver()
 
-
-List<WebElement> text = WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2)
+//Getting count of elements in left navigation
 int count=WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).size()
 println("Number of elements:" +count);
 
+//loop to check where the catalog resides
 for(int i=0;i<count;i++)
 	
 {
 	String textdata=WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).get(i).getText();
 	println(textdata)
 	
-	if(textdata=="Channels")
+	if(textdata==GlobalVariable.redirect_left_navigation)
 	{	
-	println('Data Fetched')
+	println('Successfully Clicked On :'+GlobalVariable.redirect_left_navigation)
 	WebUI.findWebElements(findTestObject('Marketplace Redirection Catalogs Objects/marketplace_redirection_catalogs'),2).get(i).click()
 	break
 	}
 }
 
+//move to catalogs by clicking on catalogs
 driver.findElement(By.linkText("Catalogs")).click()
+println('Successfully Clicked On :'+"Catalogs")
 

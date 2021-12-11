@@ -17,25 +17,41 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
 
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.WebElement
+
+//Open Browser
 WebUI.openBrowser(GlobalVariable.urlLogin)
 
+//To maximize the window of the browser
 WebUI.maximizeWindow()
 
+//Waiting time
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('PrioTicket Login Objects/Username'), GlobalVariable.username)
+//Username of the user who is login with Prioticket
+WebUI.sendKeys(findTestObject('PrioTicket Login Objects/Username'), Keys.chord(GlobalVariable.username, Keys.TAB))
 
+//Password of the user who is login with Prioticket
 WebUI.setText(findTestObject('PrioTicket Login Objects/Password'), GlobalVariable.password)
 
+//Need to check the Domain as Priohub using Terms and Conditions 
 String text=WebUI.getAttribute(findTestObject('PrioTicket Login Objects/domain_verify'), "src")
 
 if(text.contains("phub"))
 {
 	WebUI.check(findTestObject('PrioTicket Login Objects/Terms_condition_checkbox'))
 	WebUI.click(findTestObject('PrioTicket Login Objects/SignIn_Button'))
+	println('Successfully Login With '+"Priohub")
+	
 }
  else 
 	 
 WebUI.click(findTestObject('PrioTicket Login Objects/SignIn_Button'))
-
+println('Successfully Login With '+"PrioTicket")

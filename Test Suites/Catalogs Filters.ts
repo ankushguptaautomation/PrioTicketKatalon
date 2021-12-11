@@ -15,18 +15,18 @@
       <guid>164b3354-c6fb-4f29-a6cd-2c5cd2ade85d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters count Active Inactive All/direct_catalog_active_filter</testCaseId>
+      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters Active Inactive All/catalog_active_filter</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>46eb22d0-fe2a-4706-a250-61fd2d506181</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters count Active Inactive All/direct_catalog_inactive_filter</testCaseId>
+      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters Active Inactive All/catalog_inactive_filter</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d59504c0-98aa-4973-b1de-199f82a34582</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters count Active Inactive All/direct_catalog_all_filter</testCaseId>
+      <testCaseId>Test Cases/PrioTicket Catalog/Catalog Filters Active Inactive All/catalog_all_filter</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
